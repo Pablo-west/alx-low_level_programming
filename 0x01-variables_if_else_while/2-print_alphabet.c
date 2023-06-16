@@ -3,12 +3,13 @@
 /**
  * main - Print alphabets in lowerCase
  *
- * Return 0 (Success)
+ * Return: 0 (Success)
  */
 
 int main(void)
 {
 	int lowerCase = 'a';
+
 	while (lowerCase <= 'z')
 	{
 		putchar(lowerCase);
