@@ -6,33 +6,19 @@
  * Return: 0 (success)
  */
 
-int main(void)
-{
-int j = '1';
-int i = '0';
+int main(void){
+    int digit1, digit2;
 
-while (i <= '9')
-{
-while (j <= '9')
-{
-if (!(i > j) || i == j)
-{
-putchar(i);
-putchar(j);
-if (i == '8' && j == '9')
-{
-putchar('\n');
-}
-else
-{
-putchar(',');
-putchar(' ');
-}
-}
-j++;
-}
-j = '0';
-i++;
-}
-return (0);
+    for (digit1 = 0; digit1 <= 8; digit1++){
+        for (digit2 = digit1 + 1; digit2 <= 9; digit2++){
+            putchar('0' + digit1);
+            putchar('0' + digit2);
+            if (digit1 != 8 || digit2 != 9){
+                putchar(',');
+                putchar(' ');
+            }
+        }
+    }
+    putchar('\n');
+    return (0);
 }
