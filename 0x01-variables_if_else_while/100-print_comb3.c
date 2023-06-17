@@ -6,19 +6,26 @@
  * Return: 0 (success)
  */
 
-int main(void){
-    int digit1, digit2;
+int main(void)
+{
+    int i ='0';
+    int j = '0';
 
-    for (digit1 = 0; digit1 <= 8; digit1++){
-        for (digit2 = digit1 + 1; digit2 <= 9; digit2++){
-            putchar('0' + digit1);
-            putchar('0' + digit2);
-            if (digit1 != 8 || digit2 != 9){
+    for (i = '0'; i <= '8'; i++)
+    {
+        for (j = i + 1; j <= '9'; j++)
+	{
+            putchar('0' + i);
+            putchar('0' + j);
+           
+	    if (!(i == '8' && j == '9'))
+	    {
                 putchar(',');
                 putchar(' ');
             }
         }
     }
+
     putchar('\n');
     return (0);
 }
