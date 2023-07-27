@@ -7,7 +7,7 @@
  *
  * Return: number of elements in the list
  */
-size_t count_list_elements(const list_t *head)
+size_t list_elements(const list_t *head)
 {
 	size_t element_count = 0;
 
